@@ -147,6 +147,10 @@ ol {
   background-position: top center;
 }
 
+.callto, .spad, .set-bg
+{
+  background-color: #1b0e2e;
+}
 .spad {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -257,36 +261,36 @@ ol {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    border: 4px solid #f44336;
+    border: 4px solid #00bfe7;
     border-left-color: transparent;
   }
   50% {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
-    border: 4px solid #673ab7;
+    border: 4px solid #3111c2;
     border-left-color: transparent;
   }
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-    border: 4px solid #f44336;
+    border: 4px solid #e436f4;
     border-left-color: transparent;
   }
 }
 @-webkit-keyframes loader {
   0% {
     -webkit-transform: rotate(0deg);
-    border: 4px solid #f44336;
+    border: 4px solid #00bfe7;
     border-left-color: transparent;
   }
   50% {
     -webkit-transform: rotate(180deg);
-    border: 4px solid #673ab7;
+    border: 4px solid #3111c2;
     border-left-color: transparent;
   }
   100% {
     -webkit-transform: rotate(360deg);
-    border: 4px solid #f44336;
+    border: 4px solid #e436f4;
     border-left-color: transparent;
   }
 }
@@ -704,30 +708,35 @@ ol {
   Team
 -----------------------*/
 .team {
-  padding-bottom: 90px;
+  padding-bottom: 180px;
 }
 
+.team_grp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .section-title.team__title {
-  margin-bottom: 90px;
+  margin-bottom: 60px;
 }
 
 .team__item {
-  height: 390px;
+  height: 400px;
   position: relative;
   overflow: hidden;
 }
 .team__item:hover .team__item__text {
   bottom: 0;
 }
-.team__item.team__item--second {
-  margin-top: -60px;
+/* .team__item.team__item--second {
+  margin-top: -90px;
 }
 .team__item.team__item--third {
-  margin-top: -120px;
+  margin-top: -160px;
 }
 .team__item.team__item--four {
-  margin-top: -180px;
-}
+  margin-top: -240px;
+} */
 
 .team__item__text {
   text-align: center;
@@ -748,6 +757,7 @@ ol {
   height: 100%;
   width: 100%;
   background: url(../img/team/team-hover.png);
+  background-size: cover;
   content: "";
   z-index: -1;
 }
@@ -774,9 +784,33 @@ ol {
 }
 
 .team__btn {
+  margin-top: 60px;
   position: absolute;
   right: 0;
-  bottom: 0;
+}
+
+.resume-btn{
+  margin-top: 10px;
+  font-weight: 500;
+  color: white;
+}
+.resume-btn:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width : 992px) {
+  .team_grp{
+    display:flex;
+    flex-wrap: wrap;
+  }
+.team__btn{
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+.team{
+  padding-bottom: 80px;
+}
 }
 
 /*---------------------
@@ -825,7 +859,7 @@ ol {
 }
 .callto.sp__callto {
   padding-top: 0;
-  background: black;
+  background: #1b0e2e;
 }
 
 .callto__text h2 {
@@ -861,40 +895,10 @@ ol {
   background:  black;
 }
 
-.footer__top {
-  padding: 30px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer__top__logo {
-  line-height: 40px;
-}
-.footer__top__logo a {
-  display: inline-block;
-}
-
-.footer__top__social {
-  text-align: right;
-}
-.footer__top__social a {
-  display: inline-block;
-  font-size: 15px;
-  color: #ffffff;
-  height: 40px;
-  width: 40px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  line-height: 44px;
-  text-align: center;
-  margin-right: 6px;
-}
-.footer__top__social a:last-child {
-  margin-right: 0;
-}
 
 .footer__option {
-  padding-bottom: 35px;
-  padding-top: 75px;
+  padding-bottom: 15px;
+  padding-top: 90px;
 }
 
 .footer__option__item {
@@ -924,7 +928,7 @@ ol {
 .footer__option__item ul li {
   list-style: none;
 }
-.footer__option__item ul li a {
+.footer__option__item ul li * {
   color: #adadad;
   font-size: 16px;
   font-weight: 300;
@@ -933,44 +937,29 @@ ol {
 .footer__option__item form {
   position: relative;
 }
-.footer__option__item form input {
-  height: 50px;
-  width: 100%;
-  padding-left: 20px;
-  border: 1px solid #544E5E;
-  background: transparent;
-  font-size: 16px;
-  color: #adadad;
+footer .footer_social{
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
-.footer__option__item form input::-webkit-input-placeholder {
-  color: #adadad;
+footer .social{
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
-.footer__option__item form input::-moz-placeholder {
-  color: #adadad;
+footer ul li .fa {
+  display: flex;
+  justify-content: center;       
+  align-items: center;
+  background-color: #424141;
+  border-radius: 50%;
+  padding: 0.3rem;
+  width: 30px;
+  height: 30px;  
+  color: #fff;
+  font-size: 1rem;   
+  margin-right: 0.4rem;
 }
-.footer__option__item form input:-ms-input-placeholder {
-  color: #adadad;
-}
-.footer__option__item form input::-ms-input-placeholder {
-  color: #adadad;
-}
-.footer__option__item form input::placeholder {
-  color: #adadad;
-}
-.footer__option__item form button {
-  font-size: 20px;
-  color: #ffffff;
-  border: none;
-  height: 50px;
-  width: 50px;
-  background: #00bfe7;
-  line-height: 50px;
-  text-align: center;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
 .footer__copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 30px 0;
@@ -985,6 +974,14 @@ ol {
 }
 .footer__copyright__text a {
   color: #00bfe7;
+}
+
+
+
+@media screen and (max-width : 768px) {
+  .footer_social, .links{
+    margin: 0 0 0 1rem;
+  }
 }
 
 /*---------------------
@@ -1029,7 +1026,7 @@ ol {
 -----------------------*/
 .about {
   background: rgb(24, 22, 22);
-  padding-bottom: 150px;
+  padding-bottom: 100px;
 }
 
 .about__pic__item {
@@ -1045,11 +1042,12 @@ ol {
   padding-left: 30px;
 }
 .about__text .services__item .services__item__icon:after {
-  border-color: #281A3E;
+  border-color: #00bfe7;
 }
 
 .about__text__desc {
   margin-top: -10px;
+  text-align: justify;
 }
 
 /*---------------------
@@ -1868,17 +1866,6 @@ ol {
     padding-bottom: 70px;
   }
 
-  .team__item.team__item--second {
-    margin-top: 0;
-  }
-
-  .team__item.team__item--third {
-    margin-top: 0;
-  }
-
-  .team__item.team__item--four {
-    margin-top: 0;
-  }
 
   .team__btn {
     position: relative;
@@ -2088,11 +2075,6 @@ ol {
 
   .work__item.large__item {
     width: calc(50% - 10px);
-  }
-
-  .footer__top__social {
-    text-align: left;
-    padding-top: 30px;
   }
 
   .portfolio__filter li {
