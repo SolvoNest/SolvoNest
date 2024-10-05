@@ -1288,7 +1288,7 @@ footer ul li .fa {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 3rem 0rem 0rem; /* Increased padding for a larger container */
+  padding: 4rem 3rem 0rem 0rem; /* Increased padding for a larger container */
   transform: scale(1);
   transition: transform 0.3s ease-in-out;
   max-width: 1200px; /* Larger width for more space */
